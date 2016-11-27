@@ -34,13 +34,18 @@
 (use-package helm-descbinds
   :bind ("C-h b" . helm-descbinds))
 
-(use-package helm-projectile)
+(use-package helm-projectile
+  :bind ("C-x p" . helm-projectile))
 
-(use-package hydra)
-(defhydra hydra-goto-line (goto-map ""
-                           :pre (linum-mode 1)
-                           :post (linum-mode -1))
-  "goto-line"
-  ("g" goto-line "go")
-  ("m" set-mark-command "mark" :bind nil)
-  ("q" nil "quit"))
+(projectile-mode)
+
+
+(use-package undo-tree)
+(undo-tree-mode)
+
+
+
+(use-package which-key
+  :init
+  (setq which-key-idle-delay 0.4))
+(which-key-mode 1)
