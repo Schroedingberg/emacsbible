@@ -1,3 +1,9 @@
 * The Bible of the holy text editor
-An Emacs configuration that is supposed to work out of the box. It
+An Emacs configuration/distribution that is supposed to work out of the box. It
 uses naming conventions that are inspired by archaic religious books.
+* Purpose and Goals
+
+* Installation
+
+* Roadmap
+
