@@ -9,14 +9,16 @@
 ;; Run the mode
 (global-company-mode)
 
-(use-package company-quickhelp)
-(company-quickhelp-mode 1)
+(use-package company-quickhelp
+  :config
+  (company-quickhelp-mode 1))
 
 
 
 
-(use-package smartparens)
-(smartparens-global-mode 1)
+(use-package smartparens
+  :config
+  (smartparens-global-mode 1))
 
 
   

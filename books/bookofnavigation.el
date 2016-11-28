@@ -22,7 +22,8 @@
 	 ("C-x C-f" . helm-find-files)
 	 ("C-x b" . helm-mini)
 	 ("C-x C-b" . helm-mini)
-	 ("M-y" . helm-show-kill-ring))
+	 ("M-y" . helm-show-kill-ring)
+	 ("C-s " . helm-occur))
   :init  (setq helm-buffers-fuzzy-matching t
 	       helm-recentf-fuzzy-match    t
 	       helm-M-x-fuzzy-match t
@@ -44,7 +45,7 @@
 (use-package undo-tree
   :config  (setq undo-tree-visualizer-diff 1)
   (undo-tree-mode)
-  :bind ("C-x u" . undo-tree-visualizer-diff))
+  :bind ("C-x u" . undo-tree-visualize))
 
 
 

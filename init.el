@@ -20,6 +20,8 @@
 (load-file "~/.emacs.d/books/bookofversioncontrol.el")
 (load-file "~/.emacs.d/books/bookofsemantic.el")
 (load-file "~/.emacs.d/books/bookofhydra.el")
+(load-file "~/.emacs.d/books/bookofthesnake.el")
+(load-file "~/.emacs.d/books/bookofchecking.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
