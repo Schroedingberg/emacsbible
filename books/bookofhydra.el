@@ -7,7 +7,8 @@
   ("m" set-mark-command "mark" :bind nil)
   ("q" nil "quit"))
 
-(defhydra hydra-projectile (:color teal
+(defhydra hydra-projectile (global-map "C-c p"
+			    :color teal
                 :columns 4)
   "Projectile"
   ("f"   helm-projectile-find-file                "Find File")
@@ -26,4 +27,4 @@
   ("q"   nil "Cancel" :color blue))
 
 
-;(global-set-key (kbd "C-c p" 'hydra-projectile/body))
+

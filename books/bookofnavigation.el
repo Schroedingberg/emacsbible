@@ -23,32 +23,33 @@
 	 ("C-x b" . helm-mini)
 	 ("C-x C-b" . helm-mini)
 	 ("M-y" . helm-show-kill-ring)
-	 ("C-s " . helm-occur))
+	 ("C-s " . helm-occur)
+	 ("<f5>" . helm-semantic-or-imenu))
+  :config
+  (helm-mode)
+  (helm-autoresize-mode)
   :init  (setq helm-buffers-fuzzy-matching t
 	       helm-recentf-fuzzy-match    t
 	       helm-M-x-fuzzy-match t
 	       helm-ff-search-library-in-sexp t)  )
-(helm-mode)
-(helm-autoresize-mode)
+
+
+
 
 
 (use-package helm-descbinds
   :bind ("C-h b" . helm-descbinds))
 
+(use-package projectile)
 (use-package helm-projectile
+  :config (projectile-mode 1)
   :init
   (helm-projectile-on)) 
-(use-package projectile)
-(projectile-mode)
-
 
 (use-package undo-tree
   :config  (setq undo-tree-visualizer-diff 1)
   (undo-tree-mode)
   :bind ("C-x u" . undo-tree-visualize))
-
-
-
 
 (use-package which-key
   :init

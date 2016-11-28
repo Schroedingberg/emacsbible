@@ -1,4 +1,5 @@
-(use-package org)
+(use-package org
+  :pin manual)
 (setq org-agenda-files
       (quote
        ("~/.org/Food.org"
@@ -17,6 +18,9 @@
 (setq org-agenda-skip-timestamp-if-done t)
 (setq org-deadline-warning-days 14)
 (setq org-return-follows-link t)
+;; Refile
+(setq org-refile-targets '((org-agenda-files . (:level . 1) )))
+
 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1)))
 
 (define-key global-map "\C-cl" 'org-store-link)
@@ -95,3 +99,21 @@
 
 ;; Richtig cool wäre es, wenn man über Helm Konten auswählen könnte (Und nicht nur über die helm-autocompletion aus dem Speicher)
 ))
+
+
+;;Export settings
+(setq org-latex-pdf-process
+      (quote
+       ("xelatex -interaction nonstopmode -output-directory %o %f"
+        "biber %b" "xelatex -interaction nonstopmode -output-directory %o %f"
+        "xelatex -interaction nonstopmode -output-directory %o %f")))
+
+(require 'ox-latex)
+(add-to-list 'org-latex-classes
+             '("koma-article"
+               "\\documentclass{scrartcl}"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))

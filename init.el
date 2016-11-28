@@ -6,6 +6,9 @@
 (package-initialize)
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/"))
+(add-to-list 'package-archives
+	     	     '("org" . "http://orgmode.org/elpa/"))
+	  
 ;; Make use-package always resolve dependencies.
 (setq use-package-always-ensure t)
 ;; Read the holy books of configuration
@@ -22,6 +25,7 @@
 (load-file "~/.emacs.d/books/bookofhydra.el")
 (load-file "~/.emacs.d/books/bookofthesnake.el")
 (load-file "~/.emacs.d/books/bookofchecking.el")
+(load-file "~/.emacs.d/books/bookofclojure.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
