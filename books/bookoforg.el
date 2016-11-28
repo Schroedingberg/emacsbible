@@ -22,6 +22,9 @@
 (setq org-refile-targets '((org-agenda-files . (:level . 1) )))
 
 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1)))
+(setq org-enforce-todo-dependencies t)
+(setq org-enforce-todo-checkbox-dependencies t)
+(add-hook 'org-mode-hook 'org-hide-block-all)
 
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
@@ -107,13 +110,61 @@
        ("xelatex -interaction nonstopmode -output-directory %o %f"
         "biber %b" "xelatex -interaction nonstopmode -output-directory %o %f"
         "xelatex -interaction nonstopmode -output-directory %o %f")))
+;; (add-to-list 'load-path "")
+;; (require 'ox-latex)
+;; (add-to-list 'org-latex-classes
+;;              '("koma-article"
+;;                "\\documentclass{scrartcl}"
+;;                ("\\section{%s}" . "\\section*{%s}")
+;;                ("\\subsection{%s}" . "\\subsection*{%s}")
+;;                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;                ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
-(require 'ox-latex)
+
+(add-to-list 'load-path "~/.emacs.d/contrib/lisp/")
+(require 'ox-koma-letter)
+
 (add-to-list 'org-latex-classes
-             '("koma-article"
-               "\\documentclass{scrartcl}"
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+               '("my-letter"
+                 "\\documentclass\[%
+  DIV=14,
+  fontsize=12pt,
+  parskip=half,
+  subject=titled,
+  backaddress=false,
+  fromalign=left,
+  fromemail=true,
+  fromphone=true\]\{scrlttr2\}
+  \[DEFAULT-PACKAGES]
+  \[PACKAGES]
+  \[EXTRA]"))
+(add-to-list 'org-latex-packages-alist '("AUTO" "babel" nil))
+
+(setq org-src-fontify-natively t)
+
+
+
+
+
+;;Time settings
+(setq org-clock-persist 'history)
+
+
+;;Babel
+
+(setq org-confirm-babel-evaluate nil)   ;don't prompt me to confirm everytime I want to evaluate a block
+       ;;; display/update images in the buffer after I evaluate
+(setq org-src-tab-acts-natively t)
+(setq org-src-preserve-indentation t)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ (quote
+  ((emacs-lisp . t)
+   (ditaa . t)
+   (python . t)
+   (latex . t)
+   (sh . t)
+   (ledger . t)
+   (dot . t))))
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
