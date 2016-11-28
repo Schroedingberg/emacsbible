@@ -10,17 +10,20 @@
 (defhydra hydra-projectile (:color teal
                 :columns 4)
   "Projectile"
-  ("f"   projectile-find-file                "Find File")
-  ("r"   projectile-recentf                  "Recent Files")
-  ("z"   projectile-cache-current-file       "Cache Current File")
-  ("x"   projectile-remove-known-project     "Remove Known Project")
+  ("f"   helm-projectile-find-file                "Find File")
+  ("r"   helm-projectile-recentf                  "Recent Files")
+  ("z"   helm-projectile-cache-current-file       "Cache Current File")
+  ("x"   helm-projectile-remove-known-project     "Remove Known Project")
 
-  ("d"   projectile-find-dir                 "Find Directory")
-  ("b"   projectile-switch-to-buffer         "Switch to Buffer")
-  ("c"   projectile-invalidate-cache         "Clear Cache")
-  ("X"   projectile-cleanup-known-projects   "Cleanup Known Projects")
+  ("d"   helm-projectile-find-dir                 "Find Directory")
+  ("b"   helm-projectile-switch-to-buffer         "Switch to Buffer")
+  ("c"   helm-projectile-invalidate-cache         "Clear Cache")
+  ("X"   helm-projectile-cleanup-known-projects   "Cleanup Known Projects")
 
-  ("o"   projectile-multi-occur              "Multi Occur")
-  ("s"   projectile-switch-project           "Switch Project")
-  ("k"   projectile-kill-buffers             "Kill Buffers")
+  ("o"   helm-projectile-multi-occur              "Multi Occur")
+  ("s"   helm-projectile-switch-project           "Switch Project")
+  ("k"   helm-projectile-kill-buffers             "Kill Buffers")
   ("q"   nil "Cancel" :color blue))
+
+
+;(global-set-key (kbd "C-c p" 'hydra-projectile/body))

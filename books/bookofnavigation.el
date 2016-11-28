@@ -28,24 +28,35 @@
 	       helm-M-x-fuzzy-match t
 	       helm-ff-search-library-in-sexp t)  )
 (helm-mode)
-
+(helm-autoresize-mode)
 
 
 (use-package helm-descbinds
   :bind ("C-h b" . helm-descbinds))
 
 (use-package helm-projectile
-  :bind ("C-x p" . helm-projectile))
-
+  :init
+  (helm-projectile-on)) 
+(use-package projectile)
 (projectile-mode)
 
 
-(use-package undo-tree)
-(undo-tree-mode)
+(use-package undo-tree
+  :config  (setq undo-tree-visualizer-diff 1)
+  (undo-tree-mode)
+  :bind ("C-x u" . undo-tree-visualizer-diff))
+
 
 
 
 (use-package which-key
   :init
-  (setq which-key-idle-delay 0.4))
-(which-key-mode 1)
+  (setq which-key-idle-delay 0.4)
+  :config
+  (which-key-mode 1))
+
+
+(use-package ace-link
+  :init
+  (ace-link-setup-default))
+
