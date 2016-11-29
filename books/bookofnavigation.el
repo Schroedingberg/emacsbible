@@ -62,3 +62,4 @@
   :init
   (ace-link-setup-default))
 
+(use-package dired+)
