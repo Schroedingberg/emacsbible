@@ -61,5 +61,6 @@
 (use-package ace-link
   :init
   (ace-link-setup-default))
-
+(use-package ace-window
+  :bind ("M-p" . ace-window))
 (use-package dired+)
