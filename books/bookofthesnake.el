@@ -3,9 +3,11 @@
 (use-package elpy
   :init
   (setq elpy-rpc-python-command "python3")
-  (setq )
+  (setq python-shell-interpreter "python3")
+  (setq python-shell-completion-native nil)
   :config
   (elpy-enable)
+
   )
 
 
@@ -15,4 +17,5 @@
   ("d" pyvenv-deactivate "Deactivate")
   ("w" pyvenv-workon)
   )
+
 

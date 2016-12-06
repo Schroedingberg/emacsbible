@@ -16,3 +16,4 @@
 ;; Standard key bindings
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-x C-k") 'kill-region)
+(global-set-key (kbd "<f12>") 'calc)

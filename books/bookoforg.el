@@ -20,6 +20,7 @@
 (setq org-return-follows-link t)
 ;; Refile
 (setq org-refile-targets '((org-agenda-files . (:level . 1) )))
+(setq org-hide-leading-stars 1)
 
 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1)))
 (setq org-enforce-todo-dependencies t)
@@ -168,3 +169,6 @@
    (ledger . t)
    (dot . t))))
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+
+
+(use-package org-pomodoro)

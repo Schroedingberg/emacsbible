@@ -3,3 +3,5 @@
 
 
 (use-package ledger-mode)
+(use-package pdf-tools
+  :config (pdf-tools-install))
