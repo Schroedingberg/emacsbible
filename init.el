@@ -42,7 +42,8 @@
  '(org-modules
    (quote
     (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m org-bullets org-checklist)))
- '(package-selected-packages (quote (dictcc helm use-package))))
+ '(package-selected-packages (quote (dictcc helm use-package)))
+ '(pdf-misc-print-programm "/usr/bin/gtklp"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -5,7 +5,8 @@
        ("~/.org/Food.org"
               "~/.org/JGU.org"
         "~/.org/Organizer.org"
-        "~/.org/Birthdays.org")))
+        "~/.org/Birthdays.org"
+	"~/.org/gtd.org")))
 
 ;; Org Agenda settings
 ;; Give my window view back to me when I am finished with agenda stuff
@@ -38,8 +39,8 @@
  ;;Org TODO settings
   (setq org-todo-keywords
   '((sequence "TODO(t)" "|" "DONE(d)")
-  (sequence "STARTED(s)" "WAITING(w)" "|" "DELEGATED(g)")
-  (sequence "APPT(a)" "|" "ATTENDED(1)")
+    (sequence "STARTED(s)" "WAITING(w)" "|" "DELEGATED(g)")
+    (sequence "APPT(a)" "|" "ATTENDED(1)")
   (sequence "BUG(b@)" "TESTING(i)""|" "FIXED(f)")
   (sequence "|" "CANCELED(c)")
   (sequence "TIMETRACKING(+)")))
