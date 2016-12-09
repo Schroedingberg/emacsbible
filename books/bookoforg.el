@@ -20,7 +20,9 @@
 (setq org-deadline-warning-days 14)
 (setq org-return-follows-link t)
 ;; Refile
-(setq org-refile-targets '((org-agenda-files . (:level . 1) )))
+(setq org-refile-targets '((org-agenda-files . (:level . 1))
+			   (("~/.org/gtd.org") .   (:level . 2))
+			    ))
 (setq org-hide-leading-stars 1)
 
 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1)))
@@ -38,24 +40,17 @@
 
  ;;Org TODO settings
   (setq org-todo-keywords
-  '((sequence "TODO(t)" "|" "DONE(d)")
-    (sequence "STARTED(s)" "WAITING(w)" "|" "DELEGATED(g)")
-    (sequence "APPT(a)" "|" "ATTENDED(1)")
-  (sequence "BUG(b@)" "TESTING(i)""|" "FIXED(f)")
-  (sequence "|" "CANCELED(c)")
-  (sequence "TIMETRACKING(+)")))
+	'((sequence "TODO(t)" "|" "DONE(d)")
+	  (sequence "NEXT(n)")
+    (sequence "WAITING(w)")
+    (sequence "APPT(a)" )
+  (sequence "|" "CANCELED(c)")))
+
   ;; ;; Farben anpassen
 (setq org-todo-keyword-faces
-      '(("STARTED"  . (:foreground "#b70101" :weight bold))
-	("APPT"  . (:foreground "blue" :weight bold))
- 	("BUG" . (:foreground "brown" :weight bold))
- 	("TESTING" . (:foreground "purple" :weight bold))
+      '(("APPT"  . (:foreground "blue" :weight bold))
 	("WAITING"  . (:foreground "orange" :weight bold))
-	("DELEGATED"  . (:foreground "forestgreen" :weight bold))
-	("CANCELED"  . shadow)
-  ("TIMETRACKING" . shadow)
-
-	))
+	("CANCELED"  . shadow)))
 ;; ;; Capture settings
  (setq org-default-notes-file "~/.org/Organizer.org")
 ;;  ;;Org Capture templates
@@ -64,19 +59,14 @@
   (replace-regexp-in-string "-" "/"  S))
 (setq org-capture-templates
       '(
-        ("i" "Information" entry (file+headline  "~/.org/Organizer.org" "Captured information")
+        ("i" "GTD Inbox" entry (file+headline  "~/.org/gtd.org" "Inbox")
          "* %?\n Entered on %U\n %i")
-        ("t" "Task")
-        ("tt" "Standard Todo" entry (file+headline "~/.org/Organizer.org" "Tasks")
-         "* TODO %?\n \nEntered on %U\n  %i")
-        ("td" "Standard Todo with date" entry (file+headline "~/.org/Organizer.org" "Tasks")
-         "* TODO %^{Title}\n %^t\n%?\n \nEntered on %U\n  %i")
+        ("t" "Entry with date" entry (file+headline "~/.org/Organizer.org" "Calendar")
+         "* %(org-todo) This template is not ready yet %^{Title}\n %^t\n%?\n \nEntered on %U\n  %i")
         ("j" "Journal" entry (file+datetree "~/.org/Journal.org")
          "* %?\nEntered on %U\n  %i\n")
         ("f" "Food" entry (file+datetree "~/.org/Food.org" "Food tracking")
          "* %?\n Entered on %U\n %i")
-        ("c" "Configure" entry (file+headline "~/.org/Organizer.org" "Configure")
-         )
         ("b" "Birthday" entry (file+headline "~/.org/Birthdays.org" "New Birthdays")
          "* APPT %?\n %i\n")
         ;; Inspiriert von

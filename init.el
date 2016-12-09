@@ -9,8 +9,6 @@
 (add-to-list 'package-archives
 	     	     '("org" . "http://orgmode.org/elpa/"))
 
-(add-to-list 'load-path
-	     '("~/.emacs.d/elisp/"))
 ;; Make use-package always resolve dependencies.
 (setq use-package-always-ensure t)
 ;; Read the holy books of configuration
