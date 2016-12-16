@@ -9,6 +9,10 @@
 	"~/.org/gtd.org")))
 
 ;; Org Agenda settings
+
+(setq org-agenda-custom-commands
+      '(("t" todo "NEXT")
+	("m" tags "MELISSA")))
 ;; Give my window view back to me when I am finished with agenda stuff
 (setq org-agenda-restore-windows-after-quit t)
 ;; ;; Tasks mit Datum in der Agenda ausblenden, wenn sie bereits erledigt sind:
@@ -17,8 +21,8 @@
 (setq org-agenda-skip-scheduled-if-done t)
 (setq org-agenda-skip-timestamp-if-deadline-is-shown t)
 (setq org-agenda-skip-timestamp-if-done t)
-(setq org-deadline-warning-days 14)
 (setq org-return-follows-link t)
+
 ;; Refile
 (setq org-refile-targets '((org-agenda-files . (:level . 1))
 			   (("~/.org/gtd.org") .   (:level . 2))
@@ -40,8 +44,8 @@
 
  ;;Org TODO settings
   (setq org-todo-keywords
-	'((sequence "TODO(t)" "|" "DONE(d)")
-	  (sequence "NEXT(n)")
+	 '((sequence "NEXT(n) | DONE(d)")
+	(sequence "TODO(t)" "|" "DONE(d)")
     (sequence "WAITING(w)")
     (sequence "APPT(a)" )
   (sequence "|" "CANCELED(c)")))
@@ -50,6 +54,7 @@
 (setq org-todo-keyword-faces
       '(("APPT"  . (:foreground "blue" :weight bold))
 	("WAITING"  . (:foreground "orange" :weight bold))
+	("NEXT" :foreground "#Ff0000" :background "#F5f5f5" :weight bold)
 	("CANCELED"  . shadow)))
 ;; ;; Capture settings
  (setq org-default-notes-file "~/.org/Organizer.org")
