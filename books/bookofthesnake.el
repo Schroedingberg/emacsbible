@@ -1,13 +1,10 @@
 (add-to-list 'package-archives
              '("elpy" . "https://jorgenschaefer.github.io/packages/"))
 (use-package elpy
-  :init
-  (setq elpy-rpc-python-command "python3")
-  (setq python-shell-interpreter "python3")
-  (setq python-shell-completion-native nil)
+  :pin elpy
   :config
+  (setq python-shell-completion-native nil)
   (elpy-enable)
-
   )
 
 
