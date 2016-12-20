@@ -6,6 +6,7 @@
 (package-initialize)
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/"))
+
 (add-to-list 'package-archives
 	     	     '("org" . "http://orgmode.org/elpa/"))
 
@@ -29,6 +30,7 @@
 (load-file "~/.emacs.d/books/bookofcommonlisp.el")
 (load-file "~/.emacs.d/books/bookofcommonlisp.el")
 (load-file "~/.emacs.d/books/bookofhaskell.el")
+;;(load-file "~/.emacs.d/books/bookofmessages.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

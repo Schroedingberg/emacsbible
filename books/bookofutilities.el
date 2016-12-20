@@ -5,3 +5,11 @@
 (use-package ledger-mode)
 (use-package pdf-tools
   :config (pdf-tools-install))
+
+
+(use-package sudo-edit)
+(use-package smooth-scrolling
+  :config
+  (smooth-scrolling-mode t))
+
+

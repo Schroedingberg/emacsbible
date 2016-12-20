@@ -44,7 +44,7 @@
 
  ;;Org TODO settings
   (setq org-todo-keywords
-	 '((sequence "NEXT(n) | DONE(d)")
+	 '((sequence "NEXT(n)" "|" "DONE(d)")
 	(sequence "TODO(t)" "|" "DONE(d)")
     (sequence "WAITING(w)")
     (sequence "APPT(a)" )
