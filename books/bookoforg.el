@@ -1,5 +1,7 @@
 (use-package org
   :pin manual)
+
+
 (setq org-agenda-files
       (quote
        ("~/.org/Food.org"
@@ -12,7 +14,11 @@
 
 (setq org-agenda-custom-commands
       '(("t" todo "NEXT")
-	("m" tags "MELISSA")))
+	("m" tags "MELISSA")
+	("c" "GTD Overview"
+	  ((agenda "")
+	  (todo "NEXT")))
+	))
 ;; Give my window view back to me when I am finished with agenda stuff
 (setq org-agenda-restore-windows-after-quit t)
 ;; ;; Tasks mit Datum in der Agenda ausblenden, wenn sie bereits erledigt sind:
@@ -47,14 +53,12 @@
 	 '((sequence "NEXT(n)" "|" "DONE(d)")
 	(sequence "TODO(t)" "|" "DONE(d)")
     (sequence "WAITING(w)")
-    (sequence "APPT(a)" )
   (sequence "|" "CANCELED(c)")))
 
   ;; ;; Farben anpassen
 (setq org-todo-keyword-faces
-      '(("APPT"  . (:foreground "blue" :weight bold))
-	("WAITING"  . (:foreground "orange" :weight bold))
-	("NEXT" :foreground "#Ff0000" :background "#F5f5f5" :weight bold)
+      '(("WAITING"  . (:foreground "orange" :weight bold))
+	("NEXT" :foreground "#8b2252" :weight Bold)
 	("CANCELED"  . shadow)))
 ;; ;; Capture settings
  (setq org-default-notes-file "~/.org/Organizer.org")
@@ -66,8 +70,8 @@
       '(
         ("i" "GTD Inbox" entry (file+headline  "~/.org/gtd.org" "Inbox")
          "* %?\n Entered on %U\n %i")
-        ("t" "Entry with date" entry (file+headline "~/.org/Organizer.org" "Calendar")
-         "* %(org-todo) This template is not ready yet %^{Title}\n %^t\n%?\n \nEntered on %U\n  %i")
+        ("a" "Appointment" entry (file+headline "~/.org/gtd.org" "Calendar")
+         "* %^{Title}\n %^t\n%?\n \nEntered on %U\n  %i")
         ("j" "Journal" entry (file+datetree "~/.org/Journal.org")
          "* %?\nEntered on %U\n  %i\n")
         ("f" "Food" entry (file+datetree "~/.org/Food.org" "Food tracking")
@@ -168,3 +172,5 @@
 
 
 (use-package org-pomodoro)
+
+
