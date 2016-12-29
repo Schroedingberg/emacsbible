@@ -40,11 +40,12 @@
  '(custom-safe-themes
    (quote
     ("a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "01ac390c8aa5476078be3769f3c72a9e1f5820c9d9a8e8fcde21d0ff0bbeeec1" default)))
- '(helm-external-programs-associations (quote (("pdf" . "zathura"))))
+ '(helm-external-programs-associations (quote (("pdf" . "evince") ("html" . "firefox"))))
  '(org-modules
    (quote
     (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m org-bullets org-checklist)))
- '(package-selected-packages (quote (dictcc helm use-package)))
+ '(org-use-property-inheritance t)
+ '(package-selected-packages (quote (git-timemachine dictcc helm use-package)))
  '(pdf-misc-print-programm "/usr/bin/gtklp"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

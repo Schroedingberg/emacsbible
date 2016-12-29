@@ -25,6 +25,6 @@
 
 
 ;; Themes
-;(use-package leuven-theme)
-(use-package wombat-theme)
+(use-package leuven-theme)
+
 

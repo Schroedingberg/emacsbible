@@ -14,7 +14,7 @@
 
 (setq org-agenda-custom-commands
       '(("t" todo "NEXT")
-	("m" tags "MELISSA")
+	("m" tags-todo "MELISSA")
 	("c" "GTD Overview"
 	  ((agenda "")
 	  (todo "NEXT")))
@@ -166,6 +166,7 @@
    (python . t)
    (latex . t)
    (sh . t)
+   (clojure . t)
    (ledger . t)
    (dot . t))))
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)

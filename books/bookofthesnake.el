@@ -3,9 +3,19 @@
 (use-package elpy
   :pin elpy
   :config
-  (setq python-shell-completion-native nil)
   (elpy-enable)
+;  (elpy-use-ipython)
   )
+
+(use-package py-autopep8
+  :config
+  (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save))
+
+(use-package flycheck
+  :config
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
+
 
 
 (defhydra hydra-pyvenv (python-mode-map "C-c v")
