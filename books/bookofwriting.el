@@ -2,3 +2,4 @@
 (use-package flymd)
 (use-package tex
   :ensure auctex)
+(use-package cdlatex)

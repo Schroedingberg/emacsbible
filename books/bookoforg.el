@@ -71,7 +71,7 @@
         ("i" "GTD Inbox" entry (file+headline  "~/.org/gtd.org" "Inbox")
          "* %?\n Entered on %U\n %i")
         ("a" "Appointment" entry (file+headline "~/.org/gtd.org" "Calendar")
-         "* %^{Title}\n %^t\n%?\n \nEntered on %U\n  %i")
+         "* %^{Title}\n %^t\n%?\n \nEntered on %U")
         ("j" "Journal" entry (file+datetree "~/.org/Journal.org")
          "* %?\nEntered on %U\n  %i\n")
         ("f" "Food" entry (file+datetree "~/.org/Food.org" "Food tracking")

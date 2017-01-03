@@ -23,7 +23,7 @@
 	 ("C-x b" . helm-mini)
 	 ("C-x C-b" . helm-mini)
 	 ("M-y" . helm-show-kill-ring)
-	 ("C-s " . helm-occur)
+	 ("C-S " . helm-occur)
 	 ("<f5>" . helm-semantic-or-imenu))
   :config
   (helm-mode)
