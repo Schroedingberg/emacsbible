@@ -26,5 +26,9 @@
 
 ;; Themes
 (use-package leuven-theme)
+;; (use-package color-theme-sanityinc-tomorrow
+;;   :config
+;;   (load-theme sanityinc-tomorrow-)
+;;   )
 
 

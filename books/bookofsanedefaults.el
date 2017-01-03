@@ -20,3 +20,7 @@
 ;; 
 ;(setq backup-directory-alist `((".*" . ,temporary-file-directory)))
 
+;; Highlight matching parens
+(show-paren-mode 1)
+;; ;; No need for ~ files when editing
+(setq create-lockfiles nil)
