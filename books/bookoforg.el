@@ -14,7 +14,6 @@
 
 (setq org-agenda-custom-commands
       '(("t" todo "NEXT")
-	("m" tags-todo "MELISSA")
 	("c" "GTD Overview"
 	  ((agenda "")
 	  (todo "NEXT")))
