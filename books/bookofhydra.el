@@ -7,24 +7,6 @@
   ("m" set-mark-command "mark" :bind nil)
   ("q" nil "quit"))
 
-;(defhydra hydra-projectile (global-map ""
-;			    :color teal
-;                :columns 4)
-;  "Projectile"
-;  ("f"   helm-projectile-find-file                "Find File")
-;  ("r"   helm-projectile-recentf                  "Recent Files")
-;  ("z"   helm-projectile-cache-current-file       "Cache Current File")
-;  ("x"   helm-projectile-remove-known-project     "Remove Known Project")
-;
-;  ("d"   helm-projectile-find-dir                 "Find Directory")
-;  ("b"   helm-projectile-switch-to-buffer         "Switch to Buffer")
-;  ("c"   helm-projectile-invalidate-cache         "Clear Cache")
-;  ("X"   helm-projectile-cleanup-known-projects   "Cleanup Known Projects")
-;
-;  ("o"   helm-projectile-multi-occur              "Multi Occur")
-;  ("s"   helm-projectile-switch-project           "Switch Project")
-;  ("k"   helm-projectile-kill-buffers             "Kill Buffers")
-;  ("q"   nil "Cancel" :color blue))
 
 
 
@@ -32,3 +14,12 @@
   "zoom"
   ("g" text-scale-increase "in")
   ("l" text-scale-decrease "out"))
+
+
+(defhydra hydra-smartparens (global-map "C-x p")
+  "Manipulate parentheses"
+  ("s" sp-splice-sexp "Splice")
+  ("r" sp-rewrap-sexp "Rewrap"))
+
+
+
