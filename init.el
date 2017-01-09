@@ -20,6 +20,7 @@
 		bookofcompletion
 		bookofcolours
 		bookofsanedefaults
+		bookofutilities
 	       ))
 (load-file "~/.emacs.d/books/bookofnavigation.el")
 (load-file "~/.emacs.d/books/bookofcompletion.el")
