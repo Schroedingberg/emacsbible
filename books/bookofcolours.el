@@ -32,3 +32,4 @@
 ;;   )
 
 
+(provide 'bookofcolours)

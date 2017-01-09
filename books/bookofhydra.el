@@ -19,7 +19,8 @@
 (defhydra hydra-smartparens (global-map "C-x p")
   "Manipulate parentheses"
   ("s" sp-splice-sexp "Splice")
-  ("r" sp-rewrap-sexp "Rewrap"))
+  ("r" sp-rewrap-sexp "Rewrap")
+  ("c" sp-convolute-sexp "Convolute"))
 
 
 

@@ -13,3 +13,4 @@
 (use-package visual-regexp)
 (use-package visual-regexp-steroids)
 
+(provide 'bookofutilities)

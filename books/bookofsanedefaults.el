@@ -24,3 +24,5 @@
 (show-paren-mode 1)
 ;; ;; No need for ~ files when editing
 (setq create-lockfiles nil)
+
+(provide 'bookofsanedefaults)

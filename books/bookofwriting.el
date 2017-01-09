@@ -3,3 +3,4 @@
 (use-package tex
   :ensure auctex)
 (use-package cdlatex)
+(provide 'bookofwriting)

@@ -64,3 +64,5 @@
 (use-package ace-window
   :bind ("M-p" . ace-window))
 (use-package dired+)
+
+(provide 'bookofnavigation)
