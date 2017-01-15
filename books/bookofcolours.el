@@ -26,6 +26,7 @@
 
 ;; Themes
 (use-package leuven-theme)
+;(use-package cyberpunk-theme)
 ;; (use-package color-theme-sanityinc-tomorrow
 ;;   :config
 ;;   (load-theme sanityinc-tomorrow-)
