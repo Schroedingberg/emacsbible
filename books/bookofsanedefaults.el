@@ -18,7 +18,7 @@
 (global-set-key (kbd "C-x C-k") 'kill-region)
 (global-set-key (kbd "<f12>") 'calc)
 ;; 
-;(setq backup-directory-alist `((".*" . ,temporary-file-directory)))
+(setq backup-directory-alist `(("/tmp/")))
 
 ;; Highlight matching parens
 (show-paren-mode 1)
