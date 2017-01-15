@@ -105,6 +105,7 @@
 
 
 ;;Export settings
+(require 'ox-md)
 (setq org-latex-pdf-process
       (quote
        ("xelatex -interaction nonstopmode -output-directory %o %f"
@@ -169,7 +170,7 @@
    (ledger . t)
    (dot . t))))
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
-
+(setq org-ditaa-jar-path "/home/aaron/.emacs.d/ditaa0_9.jar")
 
 (use-package org-pomodoro)
 
