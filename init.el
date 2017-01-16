@@ -65,7 +65,7 @@
  '(org-use-property-inheritance t)
  '(package-selected-packages
    (quote
-    (caskxy cask-mode ess sicp color-theme-sanityinc-tomorrow tomorrow-night-light-theme git-timemachine dictcc helm use-package)))
+    (parse-csv caskxy cask-mode ess sicp color-theme-sanityinc-tomorrow tomorrow-night-light-theme git-timemachine dictcc helm use-package)))
  '(pdf-misc-print-programm "/usr/bin/gtklp"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

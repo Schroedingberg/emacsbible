@@ -24,5 +24,5 @@
 (show-paren-mode 1)
 ;; ;; No need for ~ files when editing
 (setq create-lockfiles nil)
-
+(add-hook 'emacs-lisp-mode-hook ( local-set-key (kbd "C-c C-l") 'eval-buffer))
 (provide 'bookofsanedefaults)
