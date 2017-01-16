@@ -13,7 +13,9 @@
 ;; Org Agenda settings
 
 (setq org-agenda-custom-commands
-      '(("t" todo "NEXT")
+      '(("t" "Next actions list"
+	 ((todo "NEXT" )
+	  (todo "WAITING")))
 	("c" "GTD Overview"
 	  ((agenda "")
 	  (todo "NEXT")))
@@ -51,7 +53,7 @@
   (setq org-todo-keywords
 	 '((sequence "NEXT(n)" "|" "DONE(d)")
 	(sequence "TODO(t)" "|" "DONE(d)")
-    (sequence "WAITING(w)")
+    (sequence "WAITING(w@/!)")
   (sequence "|" "CANCELED(c)")))
 
   ;; ;; Farben anpassen
