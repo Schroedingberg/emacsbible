@@ -7,6 +7,8 @@
 ;  (elpy-use-ipython)
   )
 
+
+(use-package virtualenvwrapper)
 (use-package py-autopep8
   :config
   (add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save))
