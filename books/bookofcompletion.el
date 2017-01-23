@@ -19,8 +19,11 @@
 (use-package smartparens
   :config
   (smartparens-global-mode 1)
+  (show-smartparens-global-mode 1)
   (require 'smartparens-config)
-  )
+  :bind
+  ("C-M-a" . sp-beginning-of-sexp)
+  ("C-M-e" . sp-end-of-sexp))
   
 
 (provide 'bookofcompletion)
