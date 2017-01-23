@@ -34,3 +34,9 @@
 /auto-save-list/.saves-14432-amm~
 /auto-save-list/.saves-15388-amm~
 /*.el
+/.cask/25.1/bootstrap/archives/gnu/archive-contents
+/.cask/25.1/bootstrap/archives/gnu/archive-contents.signed
+/.cask/25.1/bootstrap/archives/melpa/archive-contents
+/.cask/25.1/bootstrap/commander-20140120.1052/commander-autoloads.el
+/.cask/25.1/bootstrap/commander-20140120.1052/commander-pkg.el
+/.cask/25.1/bootstrap/commander-20140120.1052/commander.el

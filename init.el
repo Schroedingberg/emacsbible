@@ -23,7 +23,7 @@
 		bookofutilities
 		bookofdev
 		))
-(load-file (read-book "bookofdev.el"))
+
 (load-file "~/.emacs.d/books/bookofnavigation.el")
 (load-file "~/.emacs.d/books/bookofcompletion.el")
 (load-file "~/.emacs.d/books/bookofcolours.el")
@@ -43,7 +43,8 @@
 (load-file "~/.emacs.d/books/bookofhaskell.el")
 (load-file "~/.emacs.d/books/bookofbooks.el")
 (load-file "~/.emacs.d/books/bookofstatistics.el")
-;;(load-file "~/.emacs.d/books/bookofmessages.el")
+(load-file "~/.emacs.d/books/bookofmessages.el")
+(load-file (read-book "bookofdev.el"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -66,7 +67,8 @@
  '(package-selected-packages
    (quote
     (leuven-dark-theme parse-csv caskxy cask-mode ess sicp color-theme-sanityinc-tomorrow tomorrow-night-light-theme git-timemachine dictcc helm use-package)))
- '(pdf-misc-print-programm "/usr/bin/gtklp"))
+ '(pdf-misc-print-programm "/usr/bin/gtklp")
+ '(pyvenv-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
