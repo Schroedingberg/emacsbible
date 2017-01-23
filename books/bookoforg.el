@@ -16,6 +16,7 @@
       '(("t" "Next actions list"
 	 ((todo "NEXT" )
 	  (todo "WAITING")))
+
 	("c" "GTD Overview"
 	  ((agenda "")
 	  (todo "NEXT")))
@@ -99,10 +100,13 @@
          ("lm" "Manuell eintragen" plain (file "~/.org/finance.dat")
           "%(replace-minus-with-slash (org-read-date)) %^{Kreditor, Artikelbezeichnung}
           " :empty-lines 1)
+
          ;("v" "Lecture notes")
         ; ("v")
 
-;; Richtig cool wäre es, wenn man über Helm Konten auswählen könnte (Und nicht nur über die helm-autocompletion aus dem Speicher)
+	 ;; Richtig cool wäre es, wenn man über Helm Konten auswählen könnte (Und nicht nur über die helm-autocompletion aus dem Speicher)
+	 ("t" "Training" ;; Absolutely not finished
+	  table-line (file+olp "~/.org/gtd.org" "Tracking only" ))
 ))
 
 
