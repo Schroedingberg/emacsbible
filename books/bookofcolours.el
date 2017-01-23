@@ -26,7 +26,7 @@
 
 ;; Themes
 (use-package leuven-theme)
-(load-theme 'leuven-dark)
+
 
 
 ;(use-package cyberpunk-theme)
