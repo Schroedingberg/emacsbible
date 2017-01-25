@@ -22,6 +22,21 @@
 		bookofsanedefaults
 		bookofutilities
 		bookofdev
+		bookofplot
+		bookoforg
+		bookofcsv
+		bookofwriting
+		bookofversioncontrol
+		bookofsemantic
+		bookofhydra
+		bookofthesnake
+		bookofchecking
+		bookofclojure
+		bookofcommonlisp
+		bookofhaskell
+		bookofbooks
+		bookofstatistics
+		bookofmessages
 		))
 
 (load-file "~/.emacs.d/books/bookofnavigation.el")
@@ -38,7 +53,6 @@
 (load-file "~/.emacs.d/books/bookofthesnake.el")
 (load-file "~/.emacs.d/books/bookofchecking.el")
 (load-file "~/.emacs.d/books/bookofclojure.el")
-(load-file "~/.emacs.d/books/bookofcommonlisp.el")
 (load-file "~/.emacs.d/books/bookofcommonlisp.el")
 (load-file "~/.emacs.d/books/bookofhaskell.el")
 (load-file "~/.emacs.d/books/bookofbooks.el")
