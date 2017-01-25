@@ -57,7 +57,7 @@
  '(org-use-property-inheritance t)
  '(package-selected-packages
    (quote
-    (leuven-dark-theme parse-csv caskxy cask-mode ess sicp color-theme-sanityinc-tomorrow tomorrow-night-light-theme git-timemachine dictcc helm use-package)))
+    (gnuplot-mode leuven-dark-theme parse-csv caskxy cask-mode ess sicp color-theme-sanityinc-tomorrow tomorrow-night-light-theme git-timemachine dictcc helm use-package)))
  '(pdf-misc-print-programm "/usr/bin/gtklp")
  '(pyvenv-mode t))
 (custom-set-faces
