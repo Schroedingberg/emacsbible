@@ -36,7 +36,7 @@
 			   (("~/.org/gtd.org") .   (:level . 2))
 			    ))
 (setq org-hide-leading-stars 1)
-
+(setq org-use-speed-commands t)
 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1)))
 (setq org-enforce-todo-dependencies t)
 (setq org-enforce-todo-checkbox-dependencies t)
@@ -172,6 +172,7 @@
    (python . t)
    (latex . t)
    (sh . t)
+   (gnuplot .t)
    (clojure . t)
    (ledger . t)
    (dot . t))))
