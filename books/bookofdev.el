@@ -1,4 +1,13 @@
+;; Version control
+(use-package magit
+  :bind (("C-x g" . magit-status)))
 
+
+(use-package browse-at-remote)
+
+;; Syntax/Convention checking
+(use-package flymake)
+(use-package flycheck)
 ;; General debugging
 (use-package realgud
   :pin melpa)

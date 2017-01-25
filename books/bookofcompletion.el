@@ -24,7 +24,15 @@
   :bind
   ("C-M-a" . sp-beginning-of-sexp)
   ("C-M-e" . sp-end-of-sexp))
+
+(use-package semantic)
+
+(semantic-mode)
+(use-package srefactor)
   
+
+
+
 
 (provide 'bookofcompletion)
   

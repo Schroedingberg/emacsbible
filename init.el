@@ -9,13 +9,11 @@
 
 (add-to-list 'package-archives
 	     	     '("org" . "http://orgmode.org/elpa/"))
-
+(add-to-list 'load-path "~/.emacs.d/books")
 ;; Make use-package always resolve dependencies.
 (setq use-package-always-ensure t)
 ;; Read the holy books of configuration
-(defmacro read-book (book)
-  `(concat "~/.emacs.d/books/" ,book)
-  )
+
 (setq library '(bookofnavigation
 		bookofcompletion
 		bookofcolours
@@ -26,11 +24,7 @@
 		bookoforg
 		bookofcsv
 		bookofwriting
-		bookofversioncontrol
-		bookofsemantic
-		bookofhydra
 		bookofthesnake
-		bookofchecking
 		bookofclojure
 		bookofcommonlisp
 		bookofhaskell
@@ -39,26 +33,27 @@
 		bookofmessages
 		))
 
-(load-file "~/.emacs.d/books/bookofnavigation.el")
-(load-file "~/.emacs.d/books/bookofcompletion.el")
-(load-file "~/.emacs.d/books/bookofcolours.el")
-(load-file "~/.emacs.d/books/bookofsanedefaults.el")
-(load-file "~/.emacs.d/books/bookofutilities.el")
-(load-file "~/.emacs.d/books/bookoforg.el")
-(load-file "~/.emacs.d/books/bookofcsv.el")
-(load-file "~/.emacs.d/books/bookofwriting.el")
-(load-file "~/.emacs.d/books/bookofversioncontrol.el")
-(load-file "~/.emacs.d/books/bookofsemantic.el")
-(load-file "~/.emacs.d/books/bookofhydra.el")
-(load-file "~/.emacs.d/books/bookofthesnake.el")
-(load-file "~/.emacs.d/books/bookofchecking.el")
-(load-file "~/.emacs.d/books/bookofclojure.el")
-(load-file "~/.emacs.d/books/bookofcommonlisp.el")
-(load-file "~/.emacs.d/books/bookofhaskell.el")
-(load-file "~/.emacs.d/books/bookofbooks.el")
-(load-file "~/.emacs.d/books/bookofstatistics.el")
-(load-file "~/.emacs.d/books/bookofmessages.el")
-(load-file (read-book "bookofdev.el"))
+(mapcar 'require library)	
+;; (load-file "~/.emacs.d/books/bookofnavigation.el")
+;; (load-file "~/.emacs.d/books/bookofcompletion.el")
+;; (load-file "~/.emacs.d/books/bookofcolours.el")
+;; (load-file "~/.emacs.d/books/bookofsanedefaults.el")
+;; (load-file "~/.emacs.d/books/bookofutilities.el")
+;; (load-file "~/.emacs.d/books/bookoforg.el")
+;; (load-file "~/.emacs.d/books/bookofcsv.el")
+;; (load-file "~/.emacs.d/books/bookofwriting.el")
+;; (load-file "~/.emacs.d/books/bookofversioncontrol.el")
+;; (load-file "~/.emacs.d/books/bookofsemantic.el")
+;; (load-file "~/.emacs.d/books/bookofhydra.el")
+;; (load-file "~/.emacs.d/books/bookofthesnake.el")
+;; (load-file "~/.emacs.d/books/bookofchecking.el")
+;; (load-file "~/.emacs.d/books/bookofclojure.el")
+;; (load-file "~/.emacs.d/books/bookofcommonlisp.el")
+;; (load-file "~/.emacs.d/books/bookofhaskell.el")
+;; (load-file "~/.emacs.d/books/bookofbooks.el")
+;; (load-file "~/.emacs.d/books/bookofstatistics.el")
+;; (load-file "~/.emacs.d/books/bookofmessages.el")
+;; (load-file (read-book "bookofdev.el"))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
