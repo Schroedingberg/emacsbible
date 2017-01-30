@@ -8,6 +8,14 @@
 (setq mu4e-maildir "/home/aaron/.mail")
 
 (setq mu4e-get-mail-command "offlineimap")
+;; use 'fancy' non-ascii characters in various places in mu4e
+(setq mu4e-use-fancy-chars t)
+;; save attachment to my desktop (this can also be a function)
+(setq mu4e-attachment-dir "~/Desktop")
+
+;; attempt to show images when viewing messages
+(setq mu4e-view-show-images t)
+
 
 
 (setq mu4e-drafts-folder "/Entw&APw-rfe")
@@ -21,7 +29,8 @@
 ;; Settings
 (setq
   mu4e-index-cleanup nil      ;; don't do a full cleanup check
-  mu4e-index-lazy-check t)    ;; don't consider up-to-date dirs
+  mu4e-index-lazy-check t    ;; don't consider up-to-date dirs
+  mu4e-compose-in-new-frame t)
 
 
 ;; smtp mail setting; these are the same that `gnus' uses.

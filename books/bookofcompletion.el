@@ -17,7 +17,7 @@
 
 
 (use-package smartparens
-  :config
+  :init
   (smartparens-global-mode 1)
   (show-smartparens-global-mode 1)
   (require 'smartparens-config)

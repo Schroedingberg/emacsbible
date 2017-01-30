@@ -173,6 +173,7 @@
    (latex . t)
    (sh . t)
    (gnuplot .t)
+   (perl . t)
    (clojure . t)
    (ledger . t)
    (dot . t))))
