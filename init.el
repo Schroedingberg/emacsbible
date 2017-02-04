@@ -2,7 +2,6 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-
 ;; Initualize settings for package management
 (package-initialize)
 (add-to-list 'package-archives
@@ -28,7 +27,7 @@
 		bookofwriting
 		bookofthesnake
 		bookofclojure
-		bookofcommonlisp
+;		bookofcommonlisp
 		bookofhaskell
 		bookofbooks
 		bookofstatistics
@@ -50,7 +49,11 @@
  '(haskell-process-suggest-remove-import-lines t)
  '(haskell-process-type (quote cabal-repl))
  '(haskell-tags-on-save t)
- '(helm-external-programs-associations (quote (("html" . "firefox") ("pdf" . "evince"))))
+ '(helm-external-programs-associations
+   (quote
+    (("wav" . "vlc")
+     ("html" . "firefox")
+     ("pdf" . "evince"))))
  '(org-modules
    (quote
     (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m org-bullets org-checklist)))

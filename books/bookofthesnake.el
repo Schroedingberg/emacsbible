@@ -1,11 +1,12 @@
 (add-to-list 'package-archives
-             '("elpy" . "https://jorgenschaefer.github.io/packages/"))
+             '("elpy" . "https://jorgenschaefer.github.io/packages/")
+	     '("melpa-stable" . "http://stable.melpa.org/packages/"))
+
 (use-package elpy
+  :ensure t
   :pin elpy
   :config
-  (elpy-enable)
-;  (elpy-use-ipython)
-  )
+  (elpy-enable))
 
 
 (use-package virtualenvwrapper)
