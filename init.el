@@ -13,6 +13,7 @@
 
 
 (add-to-list 'load-path "~/.emacs.d/books/")
+(add-to-list 'load-path "~/.emacs.d/books/hydra/")
 ;; Make use-package always resolve dependencies.
 (setq use-package-always-ensure t)
 ;; Read the holy books of configuration
