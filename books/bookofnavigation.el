@@ -82,14 +82,4 @@
   ("g" text-scale-increase "in")
   ("l" text-scale-decrease "out"))
 
-(defhydra hydra-smartparens (global-map "C-x p")
-  "Manipulate parentheses"
-  ("s" sp-splice-sexp "Splice")
-  ("r" sp-rewrap-sexp "Rewrap")
-  ("c" sp-convolute-sexp "Convolute"))
-
-
-
-
-
 (provide 'bookofnavigation)
