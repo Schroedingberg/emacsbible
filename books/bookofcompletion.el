@@ -44,17 +44,22 @@
 
 
 
-
 (use-package smartparens
   :init
   (smartparens-global-mode 1)
   (show-smartparens-global-mode 1)
   (require 'smartparens-config)
+  :config
+  (require 'smartparens-hydra)
   :bind
   ("C-M-a" . sp-beginning-of-sexp)
-  ("C-M-e" . sp-end-of-sexp))
+  ("C-M-e" . sp-end-of-sexp)
+  ("C-x p" . hydra-smartparens/body)
+  
+  )
 
 (use-package semantic)
+
 
 (semantic-mode)
 (use-package srefactor)
