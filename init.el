@@ -14,8 +14,25 @@
 
 (add-to-list 'load-path "~/.emacs.d/books/")
 (add-to-list 'load-path "~/.emacs.d/books/hydra/")
+;; Ensure that use package is installed.
+;; Use package can of course not install itself.
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(require 'use-package)
 ;; Make use-package always resolve dependencies.
 (setq use-package-always-ensure t)
+
+;; Require the typical enhancements to emacs lisp.
+;; It is just a pain to develop without these.
+(require 'cl)
+
+(use-package dash
+  :config (eval-after-load "dash" '(dash-enable-font-lock)))
+
+(use-package s)
+(use-package f)
+
 ;; Read the holy books of configuration
 (setq library '(
 		bookofnavigation
