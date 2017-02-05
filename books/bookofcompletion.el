@@ -10,6 +10,7 @@
   (setq company-global-modes '(not term-mode))
   ;; Give Company a decent default configuration.
   (setq company-minimum-prefix-length 2
+	company-idle-delay 0.1
         company-selection-wrap-around t
         company-show-numbers t
         company-tooltip-align-annotations t
