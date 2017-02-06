@@ -1,0 +1,3 @@
+[submodule "books/hydra"]
+	path = books/hydra
+	url = https://gist.github.com/Schroedingberg/ef59e71e21bd1e18f13c21d0ba4b5ce0
