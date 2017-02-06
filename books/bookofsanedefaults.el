@@ -20,6 +20,10 @@
 
 
 ;; Backup settings
+
+
+
+
 (let ((backup-dir "~/.cache/tmp/emacs/backups")
       (auto-saves-dir "~/.cache/tmp/emacs/auto-saves/")
       (trash-dir "~/.cache/tmp/trash/"))
@@ -37,10 +41,8 @@
       version-control t      ; Use version numbers on backups,
       kept-new-versions 5    ; keep some new versions
       kept-old-versions 2) ; and some old ones, too
-;; Tweak dired a little bit
-
+;; Avoid complete file loss when deleting somethin with dired (still testing)
 (setq delete-by-moving-to-trash t)
-
 
 ;; Highlight matching parens
 (show-paren-mode 1)
