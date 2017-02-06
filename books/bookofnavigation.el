@@ -40,7 +40,9 @@
 (use-package helm-descbinds
   :bind ("C-h b" . helm-descbinds))
 
-(use-package projectile)
+(use-package projectile
+  :diminish
+  projectile-mode)
 (use-package helm-projectile
   :config (projectile-mode 1)
   :init
