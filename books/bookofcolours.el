@@ -16,18 +16,11 @@
 
 
 ;; Themes
-(use-package leuven-theme
-  :demand t
-  :config
-  (load-theme 'leuven-dark))
-
-
-
-;(use-package cyberpunk-theme)
-;; (use-package color-theme-sanityinc-tomorrow
+;; (use-package leuven-theme
+;;   :demand t
 ;;   :config
-;;   (load-theme sanityinc-tomorrow-)
-;;   )
+;;   (load-theme 'leuven-dark))
+(use-package tangotango-theme)
 
 
 (provide 'bookofcolours)
