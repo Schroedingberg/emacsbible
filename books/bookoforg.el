@@ -175,6 +175,7 @@
    (python . t)
    (latex . t)
    (sh . t)
+   (haskell . t)
    (gnuplot .t)
    (perl . t)
    (clojure . t)
