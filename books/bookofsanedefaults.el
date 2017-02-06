@@ -17,12 +17,29 @@
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (global-set-key (kbd "C-x C-k") 'kill-region)
 (global-set-key (kbd "<f12>") 'calc)
-;; 
-(setq backup-directory-alist `(("/tmp/")))
+
+
+;; Backup settings
+(let ((backup-dir "~/.cache/tmp/emacs/backups")
+      (auto-saves-dir "~/.cache/tmp/emacs/auto-saves/"))
+  (dolist (dir (list backup-dir auto-saves-dir))
+    (when (not (file-directory-p dir))
+      (make-directory dir t)))
+  (setq backup-directory-alist `(("." . ,backup-dir))
+        auto-save-file-name-transforms `((".*" ,auto-saves-dir t))
+        tramp-backup-directory-alist `((".*" . ,backup-dir))
+        tramp-auto-save-directory auto-saves-dir))
+
+(setq backup-by-copying t    ; Don't delink hardlinks
+      delete-old-versions nil  ; Clean up the backups
+      version-control t      ; Use version numbers on backups,
+      kept-new-versions 5    ; keep some new versions
+      kept-old-versions 2) ; and some old ones, too
+
 
 ;; Highlight matching parens
 (show-paren-mode 1)
-;; ;; No need for ~ files when editing
-(setq create-lockfiles nil)
+;; You will call this function quite often when tweaking your
+;; emacs. Better bind it to a key.
 (add-hook 'emacs-lisp-mode-hook ( local-set-key (kbd "C-c C-l") 'eval-buffer))
 (provide 'bookofsanedefaults)
