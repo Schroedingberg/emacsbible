@@ -5,15 +5,11 @@
 ;; Start rainbow-delimiters mode in most programming related modes
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
-
-
 ;; Mode line configuration
 
 (use-package mode-icons
   :config
   (mode-icons-mode t))
-
-
 
 ;; Themes
 ;; (use-package leuven-theme
@@ -22,7 +18,7 @@
 ;;   (load-theme 'leuven-dark))
 (use-package tangotango-theme)
 (use-package smart-mode-line
-  :init
+  :config
   (setq sml/theme 'respectful)
   (sml/setup)
   )

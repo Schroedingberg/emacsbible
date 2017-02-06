@@ -35,6 +35,7 @@
       version-control t      ; Use version numbers on backups,
       kept-new-versions 5    ; keep some new versions
       kept-old-versions 2) ; and some old ones, too
+;; Tweak dired a little bit
 
 
 ;; Highlight matching parens
