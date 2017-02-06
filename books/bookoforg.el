@@ -5,6 +5,8 @@
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 
+(use-package org-dashboard)
+
 (setq org-agenda-files
       (quote
        ("~/.org/Food.org"
