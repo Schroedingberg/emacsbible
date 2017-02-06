@@ -2,6 +2,14 @@
 An Emacs configuration/distribution that is supposed to work out of the box. It
 uses naming conventions that are inspired by archaic religious books.
 * Purpose and Goals
+I desire to have a portable emacs configuration that always works out
+of the box is easy to understand an maintain, is very org mode
+friendly and is faithful to the actual Emacs experience without being
+ignorant of ideas that are just better than the standard.
+Following, a more precise and more entertaining version of this statement.
+** The commandments
+   - Thou shall not be evil 
+   - Thou shall not do again what your ancestors have done for you
 
 * Installation
 
