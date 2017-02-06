@@ -21,6 +21,10 @@
 ;;   :config
 ;;   (load-theme 'leuven-dark))
 (use-package tangotango-theme)
-
+(use-package smart-mode-line
+  :init
+  (setq sml/theme 'respectful)
+  (sml/setup)
+  )
 
 (provide 'bookofcolours)
