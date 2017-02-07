@@ -43,6 +43,7 @@
 (setq org-hide-leading-stars 1)
 (setq org-use-speed-commands t)
 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1)))
+(add-hook 'org-mode-hook 'turn-on-org-cdlatex)
 (setq org-enforce-todo-dependencies t)
 (setq org-enforce-todo-checkbox-dependencies t)
 (add-hook 'org-mode-hook 'org-hide-block-all)
