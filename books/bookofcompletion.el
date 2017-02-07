@@ -54,10 +54,9 @@
   
   )
 
-(use-package semantic)
-
-
-(semantic-mode)
+(use-package semantic
+:config
+(semantic-mode t))
 (use-package srefactor)
   
 
