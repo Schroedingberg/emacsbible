@@ -23,5 +23,5 @@
 ;; Python
 
 ;; Java
-(use-package meghanada)
+(use-package jdee)
 (provide 'bookofdev)

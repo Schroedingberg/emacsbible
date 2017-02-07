@@ -6,7 +6,9 @@
 
 
 (use-package org-dashboard)
-
+;; (use-package org-beautify-theme
+;;   :config
+;;   (load-theme 'org-beautify))
 (setq org-agenda-files
       (quote
        ("~/.org/Food.org"
