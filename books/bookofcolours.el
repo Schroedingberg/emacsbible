@@ -16,7 +16,10 @@
 ;;   :demand t
 ;;   :config
 ;;   (load-theme 'leuven-dark))
-(use-package tangotango-theme)
+
+(add-to-list 'load-path "~/.emacs.d/site-lisp/jazz-theme/")
+(load-library "jazz-theme")
+
 (use-package smart-mode-line
   :config
   (setq sml/theme 'respectful)
