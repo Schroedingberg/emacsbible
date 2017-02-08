@@ -17,8 +17,8 @@
 ;;   :config
 ;;   (load-theme 'leuven-dark))
 
-(add-to-list 'load-path "~/.emacs.d/site-lisp/jazz-theme/")
-(load-library "jazz-theme")
+(load-file "~/.emacs.d/site-lisp/jazz-theme/jazz-theme.el")
+(load-theme 'jazz t)
 
 (use-package smart-mode-line
   :config
