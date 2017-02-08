@@ -10,7 +10,9 @@
 (use-package flycheck)
 ;; General debugging
 (use-package realgud
-  :pin melpa)
+  :pin melpa
+  :config
+  (setq realgud:pdb-command-name "python -m pdb"))
 
 ;; Elisp
 (use-package cask)
