@@ -4,11 +4,9 @@
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
-
+(use-package org-pomodoro)
 (use-package org-dashboard)
-;; (use-package org-beautify-theme
-;;   :config
-;;   (load-theme 'org-beautify))
+
 (setq org-agenda-files
       (quote
        ("~/.org/Food.org"
@@ -41,8 +39,17 @@
 ;; Refile
 (setq org-refile-targets '((org-agenda-files . (:level . 1))
 			   (("~/.org/gtd.org") .   (:level . 2))
-			    ))
+			   ))
+;; Beautify
+(setq org-hide-emphasis-markers t)
 (setq org-hide-leading-stars 1)
+(setq org-fontify-whole-heading-line t)
+;; Replace org bullets with nice unicode dots
+(font-lock-add-keywords 'org-mode
+                        '(("^ +\\([-*]\\) "
+                           (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+
+
 (setq org-use-speed-commands t)
 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1)))
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
@@ -155,16 +162,10 @@
   \[PACKAGES]
   \[EXTRA]"))
 (add-to-list 'org-latex-packages-alist '("AUTO" "babel" nil))
-
 (setq org-src-fontify-natively t)
-
-
-
-
 
 ;;Time settings
 (setq org-clock-persist 'history)
-
 
 ;;Babel
 
@@ -189,7 +190,7 @@
 (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
 (setq org-ditaa-jar-path "/home/aaron/.emacs.d/ditaa0_9.jar")
 
-(use-package org-pomodoro)
+
 
 
 (provide 'bookoforg)
