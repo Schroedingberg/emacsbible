@@ -9,6 +9,7 @@
 /elpa/async-20161103.1036/async-autoloads.el
 /elpa/gnupg/pubring.kbx~
 /*.elc
+/*/*.elc
 /books/bookofcolours.el~
 /books/bookofcsv.el~
 /books/bookofnavigation.el~
@@ -40,3 +41,4 @@
 /.cask/25.1/bootstrap/commander-20140120.1052/commander-autoloads.el
 /.cask/25.1/bootstrap/commander-20140120.1052/commander-pkg.el
 /.cask/25.1/bootstrap/commander-20140120.1052/commander.el
+/.cask/25.1/bootstrap/commander-20140120.1052/commander.elc
