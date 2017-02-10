@@ -86,7 +86,7 @@
 (setq org-capture-templates
       '(
         ("i" "GTD Inbox" entry (file+headline  "~/.org/gtd.org" "Inbox")
-         "* %?\n Entered on %U\n %i")
+         "* %? %^G  \n\nEntered on %U\n %i")
         ("a" "Appointment" entry (file+headline "~/.org/gtd.org" "Calendar")
          "* %^{Title}\n %^t\n%?\n \nEntered on %U")
         ("j" "Journal" entry (file+datetree "~/.org/Journal.org")
