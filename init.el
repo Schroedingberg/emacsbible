@@ -47,7 +47,7 @@
 		bookofwriting
 		bookofthesnake
 		bookofclojure
-;		bookofcommonlisp
+;;		bookofcommonlisp
 		bookofhaskell
 		bookofbooks
 		bookofstatistics
