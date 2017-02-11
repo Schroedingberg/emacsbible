@@ -32,8 +32,8 @@
     :config
     (company-emoji-init))
   ;; Add special company backends
-  (use-package company-math)
-  (add-to-list 'company-backends 'company-math-symbols-unicode)
+  ;; (use-package company-math)
+  ;; (add-to-list 'company-backends 'company-math-symbols-unicode)
   :diminish company-mode
   )
 
