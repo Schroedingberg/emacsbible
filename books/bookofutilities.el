@@ -14,6 +14,8 @@
     (smooth-scrolling-mode t))
 
 (use-package visual-regexp)
-(use-package visual-regexp-steroids)
+(use-package visual-regexp-steroids
+  :bind
+  ("M-%" . vr/replace))
 
 (provide 'bookofutilities)
