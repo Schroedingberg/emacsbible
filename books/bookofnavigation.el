@@ -76,6 +76,10 @@
   :diminish
   ace-window-mode)
 (use-package dired+)
+(use-package eww-lnum)
+
+
+
 
 
 (use-package hydra)
@@ -93,5 +97,8 @@
   "zoom"
   ("g" text-scale-increase "in")
   ("l" text-scale-decrease "out"))
+
+
+
 
 (provide 'bookofnavigation)
