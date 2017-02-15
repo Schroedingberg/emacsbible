@@ -49,4 +49,6 @@
 ;; You will call this function quite often when tweaking your
 ;; emacs. Better bind it to a key.
 (add-hook 'emacs-lisp-mode-hook (local-set-key  (kbd "C-c C-l") 'eval-buffer))
+(setq tramp-default-user "root"
+      tramp-default-host "192.168.1.1")
 (provide 'bookofsanedefaults)

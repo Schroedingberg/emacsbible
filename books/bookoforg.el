@@ -52,6 +52,7 @@
 
 (setq org-use-speed-commands t)
 (add-hook 'org-agenda-mode-hook '(lambda () (hl-line-mode 1)))
+;(setq org-latex)
 (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
 (setq org-enforce-todo-dependencies t)
 (setq org-enforce-todo-checkbox-dependencies t)
