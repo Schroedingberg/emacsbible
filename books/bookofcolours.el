@@ -5,6 +5,8 @@
 ;; Start rainbow-delimiters mode in most programming related modes
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
+(use-package kurecolor)
+
 ;; Mode line configuration
 
 (use-package mode-icons
