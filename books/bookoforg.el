@@ -48,6 +48,7 @@
 (font-lock-add-keywords 'org-mode
                         '(("^ +\\([-*]\\) "
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+;(setq org-checkbox '(t (:background "dark slate gray" :foreground "black" :box (:line-width 1 :style released-button) :width extra-expanded)))
 
 
 (setq org-use-speed-commands t)
@@ -87,7 +88,7 @@
 (setq org-capture-templates
       '(
         ("i" "GTD Inbox" entry (file+headline  "~/.org/gtd.org" "Inbox")
-         "* %? %^G  \n\nEntered on %U\n %i")
+         "* %?\n\nEntered on %U\n %i")
         ("a" "Appointment" entry (file+headline "~/.org/gtd.org" "Calendar")
          "* %^{Title}\n %^t\n%?\n \nEntered on %U")
         ("j" "Journal" entry (file+datetree "~/.org/Journal.org")
