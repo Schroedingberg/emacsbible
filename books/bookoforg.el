@@ -35,7 +35,9 @@
 (setq org-agenda-skip-timestamp-if-deadline-is-shown t)
 (setq org-agenda-skip-timestamp-if-done t)
 (setq org-return-follows-link t)
-
+(setq org-use-property-inheritance t)
+(setq org-enforce-todo-checkbox-dependencies t)
+(setq org-log-into-drawer t)
 ;; Refile
 (setq org-refile-targets '((org-agenda-files . (:level . 1))
 			   (("~/.org/gtd.org") .   (:level . 2))

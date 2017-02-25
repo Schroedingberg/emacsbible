@@ -80,11 +80,9 @@
     (("wav" . "vlc")
      ("html" . "firefox")
      ("pdf" . "evince"))))
- '(org-enforce-todo-checkbox-dependencies t)
  '(org-modules
    (quote
     (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m org-bullets org-checklist)))
- '(org-use-property-inheritance t)
  '(package-selected-packages
    (quote
     (eww-lnum gnuplot-mode leuven-dark-theme parse-csv caskxy cask-mode ess sicp color-theme-sanityinc-tomorrow tomorrow-night-light-theme git-timemachine dictcc helm use-package)))
