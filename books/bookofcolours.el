@@ -9,9 +9,9 @@
 
 ;; Mode line configuration
 
-(use-package mode-icons
-  :config
-  (mode-icons-mode t))
+; (use-package mode-icons
+;   :config
+;   (mode-icons-mode t))
 
 ;; Themes
 ;; (use-package leuven-theme
