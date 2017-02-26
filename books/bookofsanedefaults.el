@@ -7,6 +7,7 @@
 ;; Don't use messages that you don't read
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)
+(setq-default custom-safe-themes t)
 ;; Switch of beep sound
 (setq visible-bell t)
 ;; No typing of yes or no 
