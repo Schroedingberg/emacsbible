@@ -84,13 +84,20 @@
 ;; ;; Capture settings
  (setq org-default-notes-file "~/.org/Organizer.org")
 ;;  ;;Org Capture templates
+(defun add-property-with-date-captured ()
+  "Add DATE_CAPTURED property to the current item."
+  (interactive)
+  (org-set-property "DATE_CAPTURED" (format-time-string "%F")))
+
+(add-hook 'org-capture-before-finalize-hook 'add-property-with-date-captured)
+
 ;;;; This is a helper function to avoid having to use literal strings inside a string.
 (defun replace-minus-with-slash (S)
   (replace-regexp-in-string "-" "/"  S))
 (setq org-capture-templates
       '(
         ("i" "GTD Inbox" entry (file+headline  "~/.org/gtd.org" "Inbox")
-         "* %?\n\nEntered on %U\n %i")
+         "* %?\n\%i")
         ("a" "Appointment" entry (file+headline "~/.org/gtd.org" "Calendar")
          "* %^{Title}\n %^t\n%?\n \nEntered on %U")
         ("j" "Journal" entry (file+datetree "~/.org/Journal.org")
