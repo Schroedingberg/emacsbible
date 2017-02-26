@@ -1,3 +1,6 @@
 [submodule "books/hydra"]
 	path = books/hydra
 	url = https://gist.github.com/Schroedingberg/ef59e71e21bd1e18f13c21d0ba4b5ce0
+[submodule "site-lisp/jazz-theme"]
+	path = site-lisp/jazz-theme
+	url = https://github.com/Schroedingberg/jazz-theme.git
