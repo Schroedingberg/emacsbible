@@ -87,7 +87,7 @@
 (defun add-property-with-date-captured ()
   "Add DATE_CAPTURED property to the current item."
   (interactive)
-  (org-set-property "DATE_CAPTURED" (format-time-string "%F")))
+  (org-set-property "DATE_CAPTURED" (org-time-stamp-inactive 'today)))
 
 (add-hook 'org-capture-before-finalize-hook 'add-property-with-date-captured)
 
