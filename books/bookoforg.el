@@ -85,17 +85,12 @@
  (setq org-default-notes-file "~/.org/Organizer.org")
 ;;  ;;Org Capture templates
 
-
-(defun add-property-with-date-captured ()
-  "Add DATE_CAPTURED property to the current item. This is experimental. It breaks the ledger capture template."
-  (interactive)
-  (org-set-property "DATE_CAPTURED" (format-time-string "[%Y-%m-%d %H:%M]")))
-
 (defun make-time-prop ()
+  """Returns a property drawer string with inactive timestamp as prop value for property DATE_CAPTURED."""
   (interactive)
   (format ":PROPERTIES:\n:DATE_CAPTURED: %s\n:END:\n" (format-time-string "[%Y-%m-%d %H:%M]")))
 
-;(add-hook 'org-capture-before-finalize-hook 'add-property-with-date-captured)
+
 
 ;;;; This is a helper function to avoid having to use literal strings inside a string.
 (defun replace-minus-with-slash (S)
