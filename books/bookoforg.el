@@ -84,12 +84,18 @@
 ;; ;; Capture settings
  (setq org-default-notes-file "~/.org/Organizer.org")
 ;;  ;;Org Capture templates
-(defun add-property-with-date-captured ()
-  "Add DATE_CAPTURED property to the current item."
-  (interactive)
-  (org-set-property "DATE_CAPTURED" (org-time-stamp-inactive 'today)))
 
-(add-hook 'org-capture-before-finalize-hook 'add-property-with-date-captured)
+
+(defun add-property-with-date-captured ()
+  "Add DATE_CAPTURED property to the current item. This is experimental. It breaks the ledger capture template."
+  (interactive)
+  (org-set-property "DATE_CAPTURED" (format-time-string "[%Y-%m-%d %H:%M]")))
+
+(defun make-time-prop ()
+  (interactive)
+  (format ":PROPERTIES:\n:DATE_CAPTURED: %s\n:END:\n" (format-time-string "[%Y-%m-%d %H:%M]")))
+
+;(add-hook 'org-capture-before-finalize-hook 'add-property-with-date-captured)
 
 ;;;; This is a helper function to avoid having to use literal strings inside a string.
 (defun replace-minus-with-slash (S)
@@ -97,15 +103,15 @@
 (setq org-capture-templates
       '(
         ("i" "GTD Inbox" entry (file+headline  "~/.org/gtd.org" "Inbox")
-         "* %?\n\%i")
+         "* %?\n%(make-time-prop)\%i")
         ("a" "Appointment" entry (file+headline "~/.org/gtd.org" "Calendar")
-         "* %^{Title}\n %^t\n%?\n \nEntered on %U")
+         "* %^{Title}\n%(make-time-prop) %^t\n%i")
         ("j" "Journal" entry (file+datetree "~/.org/Journal.org")
-         "* %?\nEntered on %U\n  %i\n")
+         "* %?\n%i\n")
         ("f" "Food" entry (file+datetree "~/.org/Food.org" "Food tracking")
-         "* %?\n Entered on %U\n %i")
+         "* %?\n%i")
         ("b" "Birthday" entry (file+headline "~/.org/Birthdays.org" "New Birthdays")
-         "* APPT %?\n %i\n")
+         "* APPT %?\n%t\n%i\n")
         ;; Inspiriert von
         ;; http://sachachua.com/blog/2010/11/emacs-recording-ledger-entries-with-org-capture-templates/
         ;; wird hier die Macht von Org-Capture benutzt, um häufig auftretende
