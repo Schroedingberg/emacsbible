@@ -37,22 +37,22 @@
 (server-start)
 ;; Read the holy books of configuration
 (setq library '(
-		bookofnavigation
-		bookofcompletion
-		bookofsanedefaults
-		bookofutilities
-		bookofdev
-		bookofcolours
-		bookofplot
-		bookoforg
-		bookofcsv
-		bookofwriting
-		bookofthesnake
-		bookofclojure
+		bookofnavigation;;X
+		bookofcompletion;;X
+		bookofsanedefaults;;X
+		bookofutilities;;X
+		bookofdev;;X
+		bookofcolours;;X
+		bookofplot;;X
+		bookoforg;;X
+		bookofcsv;;X
+		bookofwriting;;X
+		bookofthesnake;;X
+		bookofclojure;;X
 ;;		bookofcommonlisp
-		bookofhaskell
-		bookofbooks
-		bookofstatistics
+		bookofhaskell;;X
+		bookofbooks;;X
+		bookofstatistics;;X
 		bookofmessages
 
 		))
@@ -83,9 +83,10 @@
  '(org-modules
    (quote
     (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m org-bullets org-checklist)))
+ 
  '(package-selected-packages
    (quote
-    (eww-lnum gnuplot-mode leuven-dark-theme parse-csv caskxy cask-mode ess sicp color-theme-sanityinc-tomorrow tomorrow-night-light-theme git-timemachine dictcc helm use-package)))
+    (helm-bibtex org-ref eww-lnum gnuplot-mode leuven-dark-theme parse-csv caskxy cask-mode ess sicp color-theme-sanityinc-tomorrow tomorrow-night-light-theme git-timemachine dictcc helm use-package)))
  '(pdf-misc-print-programm "/usr/bin/gtklp")
  '(pyvenv-mode t))
 (custom-set-faces

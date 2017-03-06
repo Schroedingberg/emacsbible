@@ -6,7 +6,8 @@
 
 (use-package org-pomodoro)
 (use-package org-dashboard)
-
+(use-package helm-bibtex)
+(use-package org-ref)
 (setq org-agenda-files
       (quote
        ("~/.org/Food.org"
@@ -91,20 +92,17 @@
   (format ":PROPERTIES:\n:DATE_CAPTURED: %s\n:END:\n" (format-time-string "[%Y-%m-%d %H:%M]")))
 
 
-
 ;;;; This is a helper function to avoid having to use literal strings inside a string.
 (defun replace-minus-with-slash (S)
   (replace-regexp-in-string "-" "/"  S))
 (setq org-capture-templates
       '(
         ("i" "GTD Inbox" entry (file+headline  "~/.org/gtd.org" "Inbox")
-         "* %?\n%(make-time-prop)\%i")
+         "* %^{Title}\n%(make-time-prop)\%i%?")
         ("a" "Appointment" entry (file+headline "~/.org/gtd.org" "Calendar")
-         "* %^{Title}\n%(make-time-prop) %^t\n%i")
+         "* %^{Title}\n%(make-time-prop)%^t\n%i%?\n")
         ("j" "Journal" entry (file+datetree "~/.org/Journal.org")
          "* %?\n%i\n")
-        ("f" "Food" entry (file+datetree "~/.org/Food.org" "Food tracking")
-         "* %?\n%i")
         ("b" "Birthday" entry (file+headline "~/.org/Birthdays.org" "New Birthdays")
          "* APPT %?\n%t\n%i\n")
         ;; Inspiriert von
@@ -127,13 +125,9 @@
          ("lm" "Manuell eintragen" plain (file "~/.org/finance.dat")
           "%(replace-minus-with-slash (org-read-date)) %^{Kreditor, Artikelbezeichnung}
           " :empty-lines 1)
-
-         ;("v" "Lecture notes")
-        ; ("v")
-
 	 ;; Richtig cool wäre es, wenn man über Helm Konten auswählen könnte (Und nicht nur über die helm-autocompletion aus dem Speicher)
-	 ("t" "Training" ;; Absolutely not finished
-	  table-line (file+olp "~/.org/gtd.org" "Tracking only" ))
+	 ("t" "Workout" entry (file+olp "~/.org/gtd.org" "Habits" "Training" )
+	  "* %<%Y-%m-%d>\n %^{SQUAT}p %^{BENCHPRESS}p %^{DEADLIFT}p")
 ))
 
 
